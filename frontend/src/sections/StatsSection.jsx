@@ -1,6 +1,6 @@
 import React from 'react';
 import { Rocket, Code, Award, Calendar } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { ScrollReveal, ScrollRevealItem } from '../components/motion/ScrollReveal';
 
 const StatsSection = () => {
   const stats = [
@@ -11,24 +11,19 @@ const StatsSection = () => {
   ];
 
   return (
-    <motion.div 
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      className="card card-hover p-8 md:p-10"
-    >
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 divide-x divide-white/5">
+    <ScrollReveal className="py-4 md:py-8 w-full">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 divide-x divide-gray-200">
         {stats.map((stat, idx) => (
-          <div key={idx} className="flex flex-col items-center justify-center w-full">
+          <ScrollRevealItem key={idx} className="flex flex-col items-center justify-center w-full">
             <div className="flex items-center space-x-4 mb-2">
-              <div className="opacity-80">{stat.icon}</div>
-              <span className="text-3xl lg:text-4xl font-bold text-white">{stat.value}</span>
+              <div className="opacity-100">{stat.icon}</div>
+              <span className="text-3xl lg:text-4xl font-bold text-textMain">{stat.value}</span>
             </div>
-            <span className="text-sm text-gray-400">{stat.label}</span>
-          </div>
+            <span className="text-sm font-bold text-gray-500">{stat.label}</span>
+          </ScrollRevealItem>
         ))}
       </div>
-    </motion.div>
+    </ScrollReveal>
   );
 };
 

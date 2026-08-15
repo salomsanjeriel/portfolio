@@ -31,8 +31,16 @@ export const portfolioData = {
       title: "Task Management System",
       description: "Developed and deployed a responsive full-stack web application, connecting a dynamic front-end UI with a RESTful API backend hosted securely on AWS infrastructure.",
       technologies: ["JavaScript", "PostgreSQL", "Node.js", "Express", "AWS"],
-      imageUrl: "https://images.unsplash.com/photo-1540350394557-8d14678e7f91?q=80&w=600&auto=format&fit=crop", // Gray placeholder representation
-      githubUrl: "[YOUR_GITHUB_LINK]",
+      image: "/src/assets/projects/task-manager-login.jpg",
+      images: [
+        "/src/assets/projects/task-manager-login.jpg",
+        "/src/assets/projects/task-manager-1.jpg",
+        "/src/assets/projects/task-manager-2.jpg",
+        "/src/assets/projects/task-manager-3.jpg",
+        "/src/assets/projects/task-manager-4.jpg",
+        "/src/assets/projects/task-manager-5.jpg"
+      ],
+      githubUrl: "https://github.com/salomsanjeriel/Task-Management-System-New.git",
       demoUrl: "",
     },
     {
@@ -68,8 +76,8 @@ export const portfolioData = {
     email: "jsalomsan@gmail.com",
     phone: "+94 784422070",
     location: "Batticaloa, Sri Lanka",
-    linkedin: "[YOUR_LINKEDIN_LINK]",
-    github: "[YOUR_GITHUB_LINK]",
+    linkedin: "https://www.linkedin.com/in/salomsan-jeriel?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
+    github: "https://github.com/salomsanjeriel",
     resumeUrl: "#", // Update with your actual CV file path inside src/assets/cv/ when ready
   },
 };

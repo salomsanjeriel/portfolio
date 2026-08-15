@@ -9,79 +9,61 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply bg-[#080310] text-gray-300 font-sans antialiased selection:bg-primary-600/40 selection:text-white overflow-x-hidden;
+    @apply bg-white text-textMain font-sans antialiased selection:bg-primary-500/30 selection:text-textMain overflow-x-hidden;
     background-image: 
-      radial-gradient(circle at 15% 50%, rgba(124, 58, 237, 0.05) 0%, transparent 50%),
-      radial-gradient(circle at 85% 30%, rgba(76, 29, 149, 0.08) 0%, transparent 50%);
+      radial-gradient(circle at 15% 50%, rgba(249, 115, 22, 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 85% 30%, rgba(250, 204, 21, 0.08) 0%, transparent 50%);
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply text-white font-bold tracking-tight;
+    @apply text-textMain font-bold tracking-tight;
   }
 }
 
 @layer components {
-  /* Premium Glassmorphism Cards */
-  .card {
-    @apply bg-gradient-to-br from-[#160c28]/90 to-[#0d0718]/90 
-           backdrop-blur-xl 
-           border border-white/[0.05] 
-           shadow-[0_8px_32px_rgba(0,0,0,0.4)] 
-           rounded-[2rem] 
-           overflow-hidden 
-           transition-all duration-500 relative;
-  }
-  
-  /* Inner light for 3D effect */
-  .card::before {
-    content: '';
-    @apply absolute inset-0 rounded-[2rem] border-t border-l border-white/[0.08] pointer-events-none;
+  /* Clean Light Theme Cards */
+  .glass-card, .card {
+    @apply bg-white border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.04)] rounded-[2rem] overflow-hidden transition-all duration-300 relative;
   }
 
   .card-hover {
-    @apply hover:from-[#1d1035]/90 hover:to-[#110820]/90 
-           hover:border-primary-500/20 
-           hover:shadow-[0_8px_32px_rgba(124,58,237,0.15)] 
-           hover:-translate-y-1;
+    @apply hover:border-primary-200 hover:shadow-[0_8px_30px_rgba(249,115,22,0.1)] hover:-translate-y-1;
   }
 
-  /* Neon Text Glow */
+  /* Vibrant Text Effects */
   .text-glow {
-    text-shadow: 0 0 20px rgba(124, 58, 237, 0.5);
+    text-shadow: 0 0 15px rgba(249, 115, 22, 0.2);
   }
   
   .text-glow-intense {
-    text-shadow: 0 0 30px rgba(124, 58, 237, 0.8), 0 0 10px rgba(255, 255, 255, 0.5);
+    text-shadow: 0 0 20px rgba(249, 115, 22, 0.4), 0 0 10px rgba(250, 204, 21, 0.3);
   }
 
   /* Tags / Pills */
   .tech-pill {
-    @apply px-3 py-1 bg-[#1a0e30] border border-primary-500/20 
-           text-[10px] font-bold text-primary-300 uppercase tracking-widest 
-           rounded-full whitespace-nowrap shadow-[0_0_10px_rgba(124,58,237,0.1)];
+    @apply px-3 py-1 bg-orange-50 border border-primary-200 text-[10px] font-bold text-primary-600 uppercase tracking-widest rounded-full whitespace-nowrap;
   }
 
   /* Interactive Buttons */
   .btn-primary {
-    @apply flex items-center justify-center px-6 py-3 
-           bg-gradient-to-r from-primary-600 to-primary-700 
-           hover:from-primary-500 hover:to-primary-600 
-           text-white rounded-full text-sm font-semibold 
-           transition-all duration-300 
-           shadow-[0_0_20px_rgba(124,58,237,0.4)] hover:shadow-[0_0_30px_rgba(124,58,237,0.6)]
-           border border-white/10 hover:border-white/20;
+    @apply flex items-center justify-center px-6 py-3 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white rounded-full text-sm font-bold transition-all duration-300 shadow-[0_4px_15px_rgba(249,115,22,0.3)] hover:shadow-[0_6px_20px_rgba(249,115,22,0.4)] border border-transparent;
   }
   
   .btn-secondary {
-    @apply flex items-center justify-center px-6 py-3 
-           bg-[#160c28] hover:bg-[#20133a] 
-           text-white rounded-full text-sm font-semibold 
-           transition-all duration-300 
-           border border-white/10 hover:border-white/20;
+    @apply flex items-center justify-center px-6 py-3 bg-white hover:bg-gray-50 text-textMain rounded-full text-sm font-bold transition-all duration-300 border border-gray-200 shadow-sm hover:shadow-md;
   }
 
   /* Orbit Rings for Hero */
   .orbit-ring {
-    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border border-primary-500/20;
-    box-shadow: inset 0 0 20px rgba(124,58,237,0.1), 0 0 20px rgba(124,58,237,0.1);
+    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border border-primary-500/10;
+    box-shadow: inset 0 0 20px rgba(249,115,22,0.05), 0 0 20px rgba(249,115,22,0.05);
+  }
+
+  /* Hide scrollbar for carousel */
+  .scrollbar-hide {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
   }
 }

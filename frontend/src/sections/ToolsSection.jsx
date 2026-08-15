@@ -22,7 +22,7 @@ const toolData = [
     tools: [
       { name: "VS Code", icon: VscVscode, usage: "Used for coding and development.", color: "#007ACC" },
       { name: "Android Studio", icon: SiAndroidstudio, usage: "Used for Android application development.", color: "#3DDC84" },
-      { name: "Antigravity", icon: Code2, usage: "Used for AI-assisted application development.", color: "#7C3AED" },
+      { name: "Antigravity", icon: Code2, usage: "Used for AI-assisted application development.", color: "#ea580c" },
     ]
   },
   {
@@ -57,33 +57,26 @@ const toolData = [
 const ToolItem = ({ tool, category, onClickTool }) => {
   return (
     <div 
-      className="relative group cursor-pointer mx-3 flex items-center justify-center px-6 py-4 rounded-2xl bg-surface/40 border border-primary-500/10 hover:border-primary-400/50 hover:bg-surfaceHover transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.2)] hover:shadow-[0_0_25px_rgba(124,58,237,0.25)] hover:-translate-y-1 backdrop-blur-md"
+      className="relative group cursor-pointer mx-3 flex items-center justify-center px-6 py-4 rounded-2xl bg-white border border-gray-200 hover:border-primary-300 hover:bg-orange-50 transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-1"
       onClick={() => onClickTool({ ...tool, category })}
     >
-       {/* Icon with scaling and brightening on hover */}
        <tool.icon 
-         className="w-8 h-8 text-gray-400 group-hover:scale-110 group-hover:brightness-125 transition-all duration-300" 
+         className="w-8 h-8 opacity-80 group-hover:scale-110 group-hover:opacity-100 transition-all duration-300" 
          style={{ color: tool.color }} 
        />
-       {/* Accent color text on hover */}
-       <span className="ml-4 font-bold text-gray-300 group-hover:text-primary-300 transition-colors whitespace-nowrap tracking-wide">
+       <span className="ml-4 font-bold text-gray-700 group-hover:text-primary-600 transition-colors whitespace-nowrap tracking-wide">
          {tool.name}
        </span>
-       
-       {/* Glass highlight overlay */}
-       <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-white/0 via-white/[0.08] to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
     </div>
   );
 };
 
 const MarqueeRow = ({ tools, onClickTool }) => {
-  // Ensure the list is long enough to span the screen at least once.
   const duplications = Math.max(2, Math.ceil(12 / tools.length));
   const repeatedTools = Array(duplications).fill(tools).flat();
   
   return (
     <div className="mb-10 w-full relative">
-      {/* Marquee container with fade edges */}
       <div 
         className="relative flex overflow-hidden w-full group py-4"
         style={{ WebkitMaskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)' }}
@@ -112,10 +105,10 @@ const ToolsSection = () => {
     <section className="w-full py-10 relative" id="tools">
       
       <div className="mb-12 px-4 md:px-10">
-        <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight flex items-center">
+        <h2 className="text-3xl md:text-4xl font-bold text-textMain tracking-tight flex items-center">
           Tools <span className="text-primary-500 mx-2">&</span> Technologies
         </h2>
-        <p className="text-gray-400 mt-2 max-w-2xl">
+        <p className="text-gray-500 mt-2 max-w-2xl font-medium">
           A showcase of the modern development, design, and AI tools I actively use to build digital products.
         </p>
       </div>
@@ -127,47 +120,45 @@ const ToolsSection = () => {
         />
       </div>
 
-      {/* Modal / Popover for Tool Details */}
       <AnimatePresence>
         {selectedTool && (
           <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-background/80 backdrop-blur-md"
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-white/80 backdrop-blur-md"
             onClick={() => setSelectedTool(null)}
           >
             <motion.div 
               initial={{ scale: 0.9, y: 20 }}
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.9, y: 20 }}
-              className="bg-surface border border-primary-500/20 p-8 rounded-3xl shadow-[0_0_50px_rgba(124,58,237,0.15)] max-w-sm w-full relative"
+              className="bg-white border border-gray-200 p-8 rounded-3xl shadow-2xl max-w-sm w-full relative"
               onClick={e => e.stopPropagation()}
             >
               <button 
                 onClick={() => setSelectedTool(null)}
-                className="absolute top-4 right-4 text-gray-500 hover:text-white transition-colors"
+                className="absolute top-4 right-4 text-gray-400 hover:text-gray-700 transition-colors"
               >
                 <X className="w-5 h-5" />
               </button>
               
               <div className="flex items-center space-x-4 mb-6">
                 <div 
-                  className="p-4 rounded-2xl bg-surfaceHover border border-primary-500/10 shadow-inner"
-                  style={{ boxShadow: `0 0 20px ${selectedTool.color}20` }}
+                  className="p-4 rounded-2xl bg-gray-50 border border-gray-100 shadow-sm"
                 >
                   <selectedTool.icon className="w-10 h-10" style={{ color: selectedTool.color }} />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-white">{selectedTool.name}</h3>
-                  <span className="text-xs font-bold text-primary-400 tracking-wider uppercase">
+                  <h3 className="text-2xl font-bold text-textMain">{selectedTool.name}</h3>
+                  <span className="text-xs font-bold text-primary-500 tracking-wider uppercase">
                     {selectedTool.category}
                   </span>
                 </div>
               </div>
               
-              <div className="bg-background/50 rounded-xl p-4 border border-white/5">
-                <p className="text-sm text-gray-300 leading-relaxed">
+              <div className="bg-gray-50 rounded-xl p-4 border border-gray-200">
+                <p className="text-sm font-medium text-gray-600 leading-relaxed">
                   {selectedTool.usage}
                 </p>
               </div>

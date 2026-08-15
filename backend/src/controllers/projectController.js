@@ -17,8 +17,16 @@ const fallbackProjects = [
     title: "Task Management System",
     description: "Developed and deployed a responsive full-stack web application, connecting a dynamic front-end UI with a RESTful API backend hosted securely on AWS infrastructure.",
     technologies: ["JavaScript", "PostgreSQL", "Node.js", "Express", "AWS"],
-    image: "/src/assets/images/placeholder.jpg",
-    githubUrl: "https://github.com",
+    image: "/src/assets/projects/task-manager-login.jpg",
+    images: [
+      "/src/assets/projects/task-manager-login.jpg",
+      "/src/assets/projects/task-manager-1.jpg",
+      "/src/assets/projects/task-manager-2.jpg",
+      "/src/assets/projects/task-manager-3.jpg",
+      "/src/assets/projects/task-manager-4.jpg",
+      "/src/assets/projects/task-manager-5.jpg"
+    ],
+    githubUrl: "https://github.com/salomsanjeriel/Task-Management-System-New.git",
     liveDemoUrl: "",
     contribution: "My Contribution — To be updated"
   }
