@@ -31,8 +31,8 @@ const Navbar = () => {
         
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-3 z-50" onClick={() => setMobileMenuOpen(false)}>
-          <div className="w-10 h-10 bg-primary-500 rounded flex items-center justify-center font-bold text-white text-lg shadow-sm">
-            {portfolioData.hero.name.charAt(0)}
+          <div className="w-10 h-10 rounded flex items-center justify-center shadow-sm overflow-hidden">
+            <img src="/assets/logo.png" alt="Logo" className="w-full h-full object-contain" />
           </div>
           <span className="text-xl font-bold text-textMain dark:text-white tracking-tight transition-colors">
             {portfolioData.hero.name.split(' ').slice(-1)[0]}
