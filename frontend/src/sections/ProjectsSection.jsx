@@ -32,14 +32,14 @@ const ProjectsSection = () => {
             <TiltCard className="w-full h-[450px]">
               {({ isHovered }) => (
                 <Link to="/projects" state={{ selectedProject: project.title }} className="block w-full h-full relative rounded-[2rem] overflow-hidden group/bento border border-gray-200 dark:border-white/10 shadow-lg hover:shadow-2xl transition-all duration-500 bg-gray-900">
-                  
+
                   {/* Background Image (The UI) */}
                   <div className="absolute inset-0 w-full h-full">
                     {project.image || project.imageUrl ? (
-                      <img 
-                        src={project.image || project.imageUrl} 
-                        alt={project.title} 
-                        className={`w-full h-full object-cover object-top transition-transform duration-1000 ease-out ${isHovered ? 'scale-110' : 'scale-100'}`} 
+                      <img
+                        src={project.image || project.imageUrl}
+                        alt={project.title}
+                        className={`w-full h-full object-cover object-top transition-transform duration-1000 ease-out ${isHovered ? 'scale-110' : 'scale-100'}`}
                       />
                     ) : (
                       <div className="w-full h-full bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center text-gray-500">No Image Preview</div>
@@ -54,7 +54,7 @@ const ProjectsSection = () => {
 
                   {/* Content Container - Bottom Aligned */}
                   <div className="absolute inset-0 p-6 md:p-10 z-20 flex flex-col justify-end">
-                    
+
                     {/* Floating Technologies Tags */}
                     <div className="flex flex-wrap gap-2 mb-4 transform translate-y-4 group-hover/bento:translate-y-0 opacity-0 group-hover/bento:opacity-100 transition-all duration-500 ease-out">
                       {project.technologies.slice(0, idx === 0 ? 5 : 3).map((tech, tIdx) => (
@@ -68,7 +68,7 @@ const ProjectsSection = () => {
                     <h4 className={`text-3xl md:text-4xl lg:text-5xl font-extrabold text-white mb-3 tracking-tight transition-colors duration-300 drop-shadow-lg ${isHovered ? 'text-primary-400' : ''}`}>
                       {project.title}
                     </h4>
-                    
+
                     {/* Description */}
                     <p className="text-gray-300 text-sm md:text-base line-clamp-2 max-w-2xl mb-8 drop-shadow-md font-medium">
                       {project.description}

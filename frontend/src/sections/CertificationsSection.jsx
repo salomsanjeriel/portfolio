@@ -26,22 +26,22 @@ const CertificationsSection = () => {
           <h3 className="text-2xl font-bold text-textMain dark:text-white tracking-tight transition-colors">Certifications</h3>
         </div>
       </ScrollRevealItem>
-      
+
       {/* Vertical List of Certificates */}
       <div className="flex flex-col space-y-8 w-full mt-8">
         {certifications.map((cert, idx) => (
           <div key={idx} className="flex flex-col h-auto rounded-3xl bg-white dark:bg-[#111111] border border-gray-200 dark:border-white/10 shadow-lg hover:shadow-xl dark:shadow-[0_8px_30px_rgba(249,115,22,0.1)] dark:hover:shadow-[0_8px_30px_rgba(249,115,22,0.3)] transition-all duration-300 overflow-hidden group">
-            
+
             {/* Certificate Image Area */}
             <div className="w-full aspect-video bg-gray-50 dark:bg-black/20 flex items-center justify-center border-b border-gray-200 dark:border-white/10 overflow-hidden relative p-4 group/innercarousel">
               {cert.images && cert.images.length > 0 ? (
                 <>
                   <div className="w-full h-full flex overflow-x-auto snap-x snap-mandatory scrollbar-hide pointer-events-auto">
                     {cert.images.map((img, i) => (
-                      <img 
-                        key={i} 
-                        src={img} 
-                        alt={`${cert.title} page ${i + 1}`} 
+                      <img
+                        key={i}
+                        src={img}
+                        alt={`${cert.title} page ${i + 1}`}
                         className="w-full h-full object-contain shrink-0 snap-center drop-shadow-md transition-transform duration-500"
                       />
                     ))}
@@ -57,9 +57,9 @@ const CertificationsSection = () => {
                   </div>
                 </>
               ) : cert.image ? (
-                <img 
-                  src={cert.image} 
-                  alt={cert.title} 
+                <img
+                  src={cert.image}
+                  alt={cert.title}
                   className="w-full h-full object-contain drop-shadow-md group-hover:scale-105 transition-transform duration-500"
                 />
               ) : (
@@ -79,7 +79,7 @@ const CertificationsSection = () => {
             <div className="p-6 md:p-8 flex flex-col justify-center flex-grow text-left bg-white dark:bg-[#111111]">
               <h4 className="text-xl font-bold text-textMain dark:text-white transition-colors mb-2 line-clamp-2">{cert.title}</h4>
               <p className="text-sm font-semibold text-primary-600 dark:text-orange-400 transition-colors mb-4">{cert.issuer}</p>
-              
+
               <div className="mt-auto flex items-center justify-start border-t border-gray-100 dark:border-white/10 pt-4">
                 <div className="flex items-center space-x-2">
                   {!cert.year?.includes('reading') && <Calendar className="w-4 h-4 text-gray-400 dark:text-gray-500" />}

@@ -14,7 +14,7 @@ const SectionTimeline = ({ children }) => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start center", "end center"]
+    offset: ["start center", "end 80%"]
   });
 
   const scaleY = useSpring(scrollYProgress, {
@@ -29,15 +29,15 @@ const SectionTimeline = ({ children }) => {
       <div className="relative z-10 w-full space-y-12">
         {children}
       </div>
-      
+
       {/* Timeline Wrapper - NOW UNDER CONTENT */}
       <div className="absolute inset-y-0 left-0 right-0 pointer-events-none hidden md:block z-0">
-        
+
         {/* Background track line */}
         <div className="absolute top-0 bottom-0 left-0 right-0 mx-auto w-[2px] bg-gray-200 dark:bg-white/10" />
-        
+
         {/* Moving glowing line */}
-        <motion.div 
+        <motion.div
           className="absolute top-0 bottom-0 left-0 right-0 mx-auto w-[2px] bg-primary-500 shadow-[0_0_15px_rgba(249,115,22,0.8)] origin-top"
           style={{ scaleY }}
         />
@@ -47,7 +47,7 @@ const SectionTimeline = ({ children }) => {
         <TimelineNode top="40%" delay="0.5s" />
         <TimelineNode top="60%" delay="1s" />
         <TimelineNode top="80%" delay="1.5s" />
-        
+
         {/* Epic Terminal Point at the very bottom */}
         <div className="absolute bottom-0 left-0 right-0 mx-auto w-8 h-8 flex items-center justify-center translate-y-1/2">
           <div className="absolute inset-0 rounded-sm rotate-45 bg-primary-500 animate-ping opacity-50" style={{ animationDuration: '1.5s' }}></div>
