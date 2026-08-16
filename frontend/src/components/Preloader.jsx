@@ -41,7 +41,10 @@ const Preloader = () => {
             transition={{ duration: 1.2, ease: "easeOut" }}
             className="mb-10 text-center flex flex-col items-center"
           >
-            <h1 className="text-3xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-primary-500 to-yellow-400 tracking-[0.2em] md:tracking-[0.3em] drop-shadow-[0_0_25px_rgba(249,115,22,0.5)]">
+            <h2 className="text-gray-400 text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase mb-2">
+              Sivapalan Jeriel
+            </h2>
+            <h1 className="text-2xl md:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-primary-500 to-yellow-400 tracking-[0.2em] md:tracking-[0.3em] drop-shadow-[0_0_15px_rgba(249,115,22,0.5)]">
               SALOMSAN
             </h1>
             <div className="w-16 h-[2px] bg-primary-500/50 mt-5 rounded-full"></div>
