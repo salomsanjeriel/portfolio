@@ -33,7 +33,7 @@ const ProjectsSection = () => {
             </div>
             
             {/* Project Content card */}
-            <div className={`w-[calc(100%-2.5rem)] ml-10 md:ml-0 md:w-[calc(50%-3rem)] ${index % 2 === 0 ? 'md:mr-auto' : 'md:ml-auto'} relative rounded-[2rem] bg-gray-900 border border-gray-200 dark:border-white/10 shadow-lg group-hover:shadow-2xl dark:shadow-[0_8px_30px_rgba(249,115,22,0.2)] dark:group-hover:shadow-[0_8px_30px_rgba(249,115,22,0.5)] transition-all duration-500 overflow-hidden flex flex-col group/card hover:-translate-y-2 h-[380px] md:h-[450px]`}>
+            <div className={`w-[calc(100%-2rem)] ml-8 md:ml-0 md:w-[calc(50%-3rem)] ${index % 2 === 0 ? 'md:mr-auto' : 'md:ml-auto'} relative rounded-[2rem] bg-gray-900 border border-gray-200 dark:border-white/10 shadow-lg group-hover:shadow-2xl dark:shadow-[0_8px_30px_rgba(249,115,22,0.2)] dark:group-hover:shadow-[0_8px_30px_rgba(249,115,22,0.5)] transition-all duration-500 overflow-hidden flex flex-col group/card hover:-translate-y-2 min-h-[420px] md:min-h-0 md:h-[450px]`}>
               
               {/* Background Image Area (Full Bleed) */}
               <div className="absolute inset-0 w-full h-full bg-black group/innercarousel">

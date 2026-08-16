@@ -95,13 +95,13 @@ const HeroSection = () => {
         </ScrollRevealItem>
 
         <ScrollRevealItem>
-          <h1 className="text-5xl md:text-6xl lg:text-[5rem] font-extrabold text-textMain dark:text-white mb-2 leading-[1.1] tracking-tight transition-colors">
+          <h1 className="text-4xl md:text-6xl lg:text-[5rem] font-extrabold text-textMain dark:text-white mb-2 leading-[1.1] tracking-tight transition-colors">
             Hello, I'm
           </h1>
-          <h1 className="text-5xl md:text-6xl lg:text-[5rem] font-extrabold text-primary-500 mb-2 leading-[1.1] tracking-tight flex flex-wrap">
+          <h1 className="text-4xl md:text-6xl lg:text-[5rem] font-extrabold text-primary-500 mb-2 leading-[1.1] tracking-tight flex flex-wrap">
             <HoverText text="Sivapalan Jeriel" />
           </h1>
-          <h1 className="text-5xl md:text-6xl lg:text-[5rem] font-extrabold text-[#FACC15] mb-6 leading-[1.1] tracking-tight drop-shadow-sm flex flex-wrap">
+          <h1 className="text-4xl md:text-6xl lg:text-[5rem] font-extrabold text-[#FACC15] mb-6 leading-[1.1] tracking-tight drop-shadow-sm flex flex-wrap">
             <HoverText text="Salomsan" />
           </h1>
         </ScrollRevealItem>
@@ -216,7 +216,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ y: [0, -12, 0], opacity: 1 }}
           transition={{ y: { duration: 4, repeat: Infinity, ease: "easeInOut" }, opacity: { delay: 0.6, duration: 1 } }}
-          className="absolute -bottom-6 md:-bottom-10 -left-4 md:-left-12 bg-white dark:bg-[#1a1a1a] rounded-2xl p-5 shadow-[0_15px_40px_rgba(249,115,22,0.12)] border border-orange-50 dark:border-white/10 z-20 transition-colors"
+          className="absolute -bottom-6 md:-bottom-10 -left-2 md:-left-12 bg-white dark:bg-[#1a1a1a] rounded-2xl p-4 md:p-5 shadow-[0_15px_40px_rgba(249,115,22,0.12)] border border-orange-50 dark:border-white/10 z-20 transition-colors max-w-[250px] md:max-w-none"
         >
           <div className="text-[10px] text-gray-400 dark:text-gray-500 mb-1 font-bold uppercase tracking-widest transition-colors">Open to</div>
           <div className="text-base font-extrabold text-[#C2410C] dark:text-orange-400 mb-2 transition-colors">Internship Opportunities</div>
