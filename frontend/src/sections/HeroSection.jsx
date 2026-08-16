@@ -163,24 +163,52 @@ const HeroSection = () => {
            <motion.div animate={{ scale: [1, 1.5, 1] }} transition={{ duration: 5, repeat: Infinity, delay: 1 }} className="absolute bottom-[10%] left-[15%] w-4 h-4 rounded-full border-2 border-yellow-300"></motion.div>
         </motion.div>
 
-        {/* Photo Container as a perfect circle with floating effect and interactive hover */}
-        <motion.div 
-          style={{ x: imageX, y: imageY }} 
-          animate={{ y: [0, -15, 0] }}
-          whileHover={{ scale: 1.05, rotate: 2 }}
-          transition={{ y: { duration: 6, repeat: Infinity, ease: "easeInOut" }, scale: { type: "spring", stiffness: 300, damping: 20 } }}
-          className="relative w-full max-w-[380px] aspect-square rounded-full overflow-hidden flex items-center justify-center shadow-[0_20px_50px_rgba(249,115,22,0.25)] z-10 cursor-pointer border-4 border-white/50"
-        >
+        {/* Premium Attractive Photo Container - Mockup Style */}
+        <div className="relative w-full max-w-[450px] md:max-w-[550px] z-10 flex justify-center mt-10 md:mt-0 group">
           
-          <span className="text-gray-300 font-bold uppercase tracking-widest absolute">Photo</span>
-          
-          <motion.img
-            src={photoUrl}
-            alt={name}
-            className="w-full h-full object-cover relative z-10 transition-transform duration-700 hover:scale-110"
-          />
+          {/* Intense Glow Behind Image */}
+          <div className="absolute inset-1/4 bg-orange-600 rounded-full blur-[80px] opacity-70 pointer-events-none z-0"></div>
 
-        </motion.div>
+          {/* Floating Particles */}
+          <div className="absolute inset-0 pointer-events-none z-0">
+            <motion.div animate={{ y: [0, -20, 0], opacity: [0.3, 1, 0.3] }} transition={{ duration: 4, repeat: Infinity }} className="absolute top-[20%] left-[10%] w-2 h-2 rotate-45 bg-orange-400"></motion.div>
+            <motion.div animate={{ y: [0, 20, 0], opacity: [0.5, 1, 0.5] }} transition={{ duration: 5, repeat: Infinity }} className="absolute top-[30%] right-[15%] w-1.5 h-1.5 rounded-full bg-yellow-400"></motion.div>
+            <motion.div animate={{ y: [0, -30, 0], opacity: [0.2, 0.8, 0.2] }} transition={{ duration: 6, repeat: Infinity }} className="absolute bottom-[40%] left-[5%] w-2 h-2 border border-orange-500 rounded-full"></motion.div>
+            <motion.div animate={{ scale: [1, 1.5, 1], opacity: [0.5, 1, 0.5] }} transition={{ duration: 3, repeat: Infinity }} className="absolute bottom-[20%] right-[10%] text-orange-400 text-xs">✦</motion.div>
+            <motion.div animate={{ y: [0, -15, 0], opacity: [0.2, 0.6, 0.2] }} transition={{ duration: 7, repeat: Infinity }} className="absolute top-[10%] right-[30%] w-1 h-1 bg-white rounded-full"></motion.div>
+            <motion.div animate={{ rotate: 360, opacity: [0.4, 0.9, 0.4] }} transition={{ duration: 10, repeat: Infinity }} className="absolute bottom-[30%] left-[20%] text-orange-500 text-sm">✦</motion.div>
+          </div>
+
+          {/* Actual Image Card - Borderless */}
+          <motion.div 
+            style={{ x: imageX, y: imageY }} 
+            animate={{ y: [0, -10, 0] }}
+            transition={{ y: { duration: 6, repeat: Infinity, ease: "easeInOut" } }}
+            className="relative w-full z-10 cursor-pointer"
+          >
+            {/* The Image (Assumed transparent PNG cutout) */}
+            <motion.img
+              src={photoUrl}
+              alt={name}
+              className="w-full h-auto relative z-10 transition-transform duration-700 group-hover:scale-105 drop-shadow-[0_10px_20px_rgba(0,0,0,0.5)]"
+            />
+            
+            {/* Signature at bottom right */}
+            <motion.div 
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 1, duration: 1 }}
+              className="absolute -bottom-4 right-4 z-20"
+            >
+              <span 
+                className="text-4xl md:text-6xl text-orange-400 opacity-90 rotate-[-5deg] inline-block font-medium drop-shadow-md"
+                style={{ fontFamily: "'Brush Script MT', 'Dancing Script', cursive" }}
+              >
+                Salomsan
+              </span>
+            </motion.div>
+          </motion.div>
+        </div>
         
         {/* Continuous Floating Badge */}
         <motion.div

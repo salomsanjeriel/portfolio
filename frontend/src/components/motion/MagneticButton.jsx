@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { motion, useSpring } from 'framer-motion';
 
-const MagneticButton = ({ children, className = "", onClick, href }) => {
+const MagneticButton = ({ children, className = "", onClick, href, ...props }) => {
   const ref = useRef(null);
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isTouchDevice, setIsTouchDevice] = useState(false);
@@ -39,6 +39,7 @@ const MagneticButton = ({ children, className = "", onClick, href }) => {
       className={className}
       onClick={onClick}
       href={href}
+      {...props}
     >
       {children}
     </Component>

@@ -7,7 +7,7 @@ const EducationSection = () => {
   const { education } = portfolioData;
 
   return (
-    <ScrollReveal className="glass-card card-hover p-8 md:p-10 h-full flex flex-col bg-white dark:bg-white/5 border border-gray-100 dark:border-white/10 transition-colors duration-700" id="education">
+    <ScrollReveal className="glass-card card-hover p-8 md:p-10 h-full flex flex-col bg-transparent dark:bg-white/5 border border-gray-100 dark:border-white/10 transition-colors duration-700" id="education">
       <ScrollRevealItem className="flex items-center space-x-4 mb-10">
         <div className="w-12 h-12 rounded-2xl bg-orange-50 dark:bg-orange-500/10 border border-primary-200 dark:border-primary-500/30 flex items-center justify-center shadow-sm transition-colors">
           <GraduationCap className="w-6 h-6 text-primary-500 dark:text-orange-400" />

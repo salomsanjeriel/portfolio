@@ -63,7 +63,12 @@ const Navbar = () => {
             {isDarkMode ? <Moon className="w-5 h-5" /> : <Sun className="w-5 h-5" />}
           </button>
 
-          <MagneticButton href="/resume.pdf" className="btn-primary py-2.5 px-5 text-[10px] tracking-widest shadow-md">
+          <MagneticButton 
+            href={portfolioData.contact.resumeUrl} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="btn-primary py-2.5 px-5 text-[10px] tracking-widest shadow-md"
+          >
             DOWNLOAD CV <Download className="w-3 h-3 ml-2" />
           </MagneticButton>
         </div>

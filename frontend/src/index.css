@@ -22,7 +22,7 @@
 @layer components {
   /* Clean Light Theme Cards */
   .glass-card, .card {
-    @apply bg-white border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.04)] rounded-[2rem] overflow-hidden transition-all duration-300 relative;
+    @apply bg-transparent border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.04)] rounded-[2rem] overflow-hidden transition-all duration-300 relative;
   }
 
   .card-hover {

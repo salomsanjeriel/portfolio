@@ -4,19 +4,9 @@ export const portfolioData = {
     title: "IT Undergraduate",
     location: "Batticaloa, Sri Lanka",
     summary: "I am an enthusiastic undergraduate student studying BSc. (Hons) in Information Technology at the University of Kelaniya. I know basic programming and web technologies. I am competent in learning new IT skills and improving my practical knowledge. I am looking for an IT internship to gain real working experience and develop my career in IT.",
-    photoUrl: "/src/assets/profile.jpg",
+    photoUrl: "/src/assets/new_profile.png",
   },
   education: [
-    {
-      institution: "University of Kelaniya",
-      degree: "BSc (Hons) in Information Technology",
-      dates: "2025–2029",
-      url: "https://im.kln.ac.lk/",
-      logo: "/src/assets/education/kelaniya.jpg",
-      achievements: [
-        "Organizing Committee (OC) Member for Leo Club 'Avurudu' Event"
-      ],
-    },
     {
       institution: "St. Michael's College, Batticaloa",
       degree: "G.C.E. Advanced Level",
@@ -28,10 +18,14 @@ export const portfolioData = {
       ],
     },
     {
-      institution: "Informatics Institute of Technology",
-      degree: "AI Foundation Certificate Course",
-      dates: "2025–2026 (Currently reading)",
-      achievements: [],
+      institution: "University of Kelaniya",
+      degree: "BSc (Hons) in Information Technology",
+      dates: "2025–2029",
+      url: "https://im.kln.ac.lk/",
+      logo: "/src/assets/education/kelaniya.jpg",
+      achievements: [
+        "Organizing Committee (OC) Member for Leo Club 'Avurudu' Event"
+      ],
     }
   ],
   skills: {
@@ -118,6 +112,6 @@ export const portfolioData = {
     location: "Batticaloa, Sri Lanka",
     linkedin: "https://www.linkedin.com/in/salomsan-jeriel?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
     github: "https://github.com/salomsanjeriel",
-    resumeUrl: "#", // Update with your actual CV file path inside src/assets/cv/ when ready
+    resumeUrl: "/cv/Sivapalan_Jeriel_Salomsan_CV.pdf",
   },
 };
