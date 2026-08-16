@@ -12,6 +12,7 @@ import ContactSection from './sections/ContactSection';
 import Footer from './components/Footer';
 import ProjectsPage from './pages/ProjectsPage';
 import { ThemeProvider } from './context/ThemeContext';
+import Preloader from './components/Preloader';
 
 import { motion, useScroll, useSpring } from 'framer-motion';
 import SectionTimeline from './components/motion/SectionTimeline';
@@ -26,6 +27,7 @@ function App() {
 
   return (
     <ThemeProvider>
+      <Preloader />
       <Router>
         <div className="min-h-screen bg-white dark:bg-[#0a0a0a] text-textMain dark:text-white font-sans relative overflow-x-hidden transition-colors duration-700">
 
