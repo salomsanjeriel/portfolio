@@ -4,14 +4,14 @@ export const portfolioData = {
     title: "IT Undergraduate",
     location: "Batticaloa, Sri Lanka",
     summary: "I am an enthusiastic undergraduate student studying BSc. (Hons) in Information Technology at the University of Kelaniya. I know basic programming and web technologies. I am competent in learning new IT skills and improving my practical knowledge. I am looking for an IT internship to gain real working experience and develop my career in IT.",
-    photoUrl: "/src/assets/new_profile.png",
+    photoUrl: "/assets/new_profile.png",
   },
   education: [
     {
       institution: "St. Michael's College, Batticaloa",
       degree: "G.C.E. Advanced Level",
       dates: "2021–2023",
-      logo: "/src/assets/education/stmichaels.png",
+      logo: "/assets/education/stmichaels.png",
       url: "https://smc.edu.lk/",
       achievements: [
         "Completed Advanced Level Studies"
@@ -22,7 +22,7 @@ export const portfolioData = {
       degree: "BSc (Hons) in Information Technology",
       dates: "2025–2029",
       url: "https://im.kln.ac.lk/",
-      logo: "/src/assets/education/kelaniya.jpg",
+      logo: "/assets/education/kelaniya.jpg",
       achievements: [
         "Organizing Committee (OC) Member for Leo Club 'Avurudu' Event"
       ],
@@ -39,14 +39,14 @@ export const portfolioData = {
       title: "Task Management System",
       description: "Developed and deployed a responsive full-stack web application, connecting a dynamic front-end UI with a RESTful API backend hosted securely on AWS infrastructure.",
       technologies: ["JavaScript", "PostgreSQL", "Node.js", "Express", "AWS"],
-      image: "/src/assets/projects/task-manager-login.jpg",
+      image: "/assets/projects/task-manager-login.jpg",
       images: [
-        "/src/assets/projects/task-manager-login.jpg",
-        "/src/assets/projects/task-manager-1.jpg",
-        "/src/assets/projects/task-manager-2.jpg",
-        "/src/assets/projects/task-manager-3.jpg",
-        "/src/assets/projects/task-manager-4.jpg",
-        "/src/assets/projects/task-manager-5.jpg"
+        "/assets/projects/task-manager-login.jpg",
+        "/assets/projects/task-manager-1.jpg",
+        "/assets/projects/task-manager-2.jpg",
+        "/assets/projects/task-manager-3.jpg",
+        "/assets/projects/task-manager-4.jpg",
+        "/assets/projects/task-manager-5.jpg"
       ],
       githubUrl: "https://github.com/salomsanjeriel/Task-Management-System-New.git",
       demoUrl: "",
@@ -74,7 +74,7 @@ export const portfolioData = {
       issuer: "University of Moratuwa",
       date: "2025",
       description: "",
-      image: "/src/assets/certificates/webdevelopment.jpeg"
+      image: "/assets/certificates/webdevelopment.jpeg"
     },
     {
       title: "AI Chatbot & Machine Learning",
@@ -82,9 +82,9 @@ export const portfolioData = {
       date: "2026",
       description: "",
       images: [
-        "/src/assets/certificates/devtown-1.jpeg",
-        "/src/assets/certificates/devtown-2.jpeg",
-        "/src/assets/certificates/devtown-3.jpeg"
+        "/assets/certificates/devtown-1.jpeg",
+        "/assets/certificates/devtown-2.jpeg",
+        "/assets/certificates/devtown-3.jpeg"
       ]
     },
     {
@@ -92,7 +92,7 @@ export const portfolioData = {
       issuer: "IEEE WIE Student Branch, University of Sri Jayewardenepura",
       date: "October 2025",
       description: "Participated in the Phase 1: Ideathon of Artemia 1.0 as part of team CraftX.",
-      image: "/src/assets/certificates/artemia.jpeg",
+      image: "/assets/certificates/artemia.jpeg",
     },
     {
       title: "Machine Learning Mastery",
@@ -100,9 +100,9 @@ export const portfolioData = {
       date: "June 2026",
       description: "Successfully completed 5-days Free Bootcamp on Machine Learning Mastery.",
       images: [
-        "/src/assets/certificates/ml-mastery-1.jpg",
-        "/src/assets/certificates/ml-mastery-2.jpg",
-        "/src/assets/certificates/ml-mastery-3.jpg"
+        "/assets/certificates/ml-mastery-1.jpg",
+        "/assets/certificates/ml-mastery-2.jpg",
+        "/assets/certificates/ml-mastery-3.jpg"
       ]
     }
   ],
