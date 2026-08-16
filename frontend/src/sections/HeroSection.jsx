@@ -70,7 +70,7 @@ const HeroSection = () => {
   // Parallax values mapping
   const imageX = useTransform(smoothX, [-0.5, 0.5], ["-15px", "15px"]);
   const imageY = useTransform(smoothY, [-0.5, 0.5], ["-15px", "15px"]);
-  
+
   const badgeX = useTransform(smoothX, [-0.5, 0.5], ["-25px", "25px"]);
   const badgeY = useTransform(smoothY, [-0.5, 0.5], ["-25px", "25px"]);
 
@@ -86,7 +86,7 @@ const HeroSection = () => {
     >
       {/* Left side: Intro text */}
       <ScrollReveal className="lg:col-span-6 flex flex-col justify-center order-2 lg:order-1 z-10 px-4 md:px-8">
-        
+
         <ScrollRevealItem className="mb-6">
           <span className="inline-flex items-center px-4 py-1.5 bg-orange-50 dark:bg-orange-500/10 border border-orange-200 dark:border-orange-500/30 text-[11px] font-extrabold text-primary-500 dark:text-orange-400 uppercase tracking-[0.2em] rounded-full transition-colors">
             <span className="w-2 h-2 rounded-full bg-primary-500 dark:bg-orange-400 mr-2 animate-pulse"></span>
@@ -142,30 +142,30 @@ const HeroSection = () => {
         transition={{ duration: 1, ease: "easeOut" }}
         className="lg:col-span-6 order-1 lg:order-2 flex justify-center items-center relative h-[450px] md:h-[600px] z-10"
       >
-        
+
         {/* Animated Background Blobs */}
-        <motion.div 
-          animate={{ rotate: 360, scale: [1, 1.1, 1] }} 
+        <motion.div
+          animate={{ rotate: 360, scale: [1, 1.1, 1] }}
           transition={{ rotate: { duration: 20, repeat: Infinity, ease: "linear" }, scale: { duration: 8, repeat: Infinity, ease: "easeInOut" } }}
           className="absolute w-[300px] h-[300px] md:w-[450px] md:h-[450px] bg-gradient-to-tr from-orange-200 to-orange-400 opacity-20 blur-3xl rounded-[30%_70%_70%_30%/30%_30%_70%_70%] z-0"
         />
-        <motion.div 
-          animate={{ rotate: -360, scale: [1, 1.2, 1] }} 
+        <motion.div
+          animate={{ rotate: -360, scale: [1, 1.2, 1] }}
           transition={{ rotate: { duration: 25, repeat: Infinity, ease: "linear" }, scale: { duration: 10, repeat: Infinity, ease: "easeInOut" } }}
           className="absolute w-[250px] h-[250px] md:w-[400px] md:h-[400px] bg-gradient-to-bl from-yellow-200 to-yellow-400 opacity-20 blur-3xl rounded-[70%_30%_30%_70%/70%_70%_30%_30%] z-0"
         />
 
         {/* Floating Decorative Elements */}
         <motion.div style={{ x: ringX, y: ringY }} className="absolute inset-0 z-0 pointer-events-none">
-           <motion.div animate={{ y: [0, -20, 0], rotate: 360 }} transition={{ duration: 6, repeat: Infinity }} className="absolute top-[10%] left-[10%] text-orange-300">✦</motion.div>
-           <motion.div animate={{ y: [0, 20, 0], rotate: -360 }} transition={{ duration: 8, repeat: Infinity }} className="absolute bottom-[20%] right-[10%] text-yellow-400">✦</motion.div>
-           <motion.div animate={{ scale: [1, 1.5, 1] }} transition={{ duration: 4, repeat: Infinity }} className="absolute top-[30%] right-[5%] w-3 h-3 rounded-full border-2 border-orange-300"></motion.div>
-           <motion.div animate={{ scale: [1, 1.5, 1] }} transition={{ duration: 5, repeat: Infinity, delay: 1 }} className="absolute bottom-[10%] left-[15%] w-4 h-4 rounded-full border-2 border-yellow-300"></motion.div>
+          <motion.div animate={{ y: [0, -20, 0], rotate: 360 }} transition={{ duration: 6, repeat: Infinity }} className="absolute top-[10%] left-[10%] text-orange-300">✦</motion.div>
+          <motion.div animate={{ y: [0, 20, 0], rotate: -360 }} transition={{ duration: 8, repeat: Infinity }} className="absolute bottom-[20%] right-[10%] text-yellow-400">✦</motion.div>
+          <motion.div animate={{ scale: [1, 1.5, 1] }} transition={{ duration: 4, repeat: Infinity }} className="absolute top-[30%] right-[5%] w-3 h-3 rounded-full border-2 border-orange-300"></motion.div>
+          <motion.div animate={{ scale: [1, 1.5, 1] }} transition={{ duration: 5, repeat: Infinity, delay: 1 }} className="absolute bottom-[10%] left-[15%] w-4 h-4 rounded-full border-2 border-yellow-300"></motion.div>
         </motion.div>
 
         {/* Premium Attractive Photo Container - Mockup Style */}
         <div className="relative w-full max-w-[450px] md:max-w-[550px] z-10 flex justify-center mt-10 md:mt-0 group">
-          
+
           {/* Intense Glow Behind Image */}
           <div className="absolute inset-1/4 bg-orange-600 rounded-full blur-[80px] opacity-70 pointer-events-none z-0"></div>
 
@@ -180,8 +180,8 @@ const HeroSection = () => {
           </div>
 
           {/* Actual Image Card - Borderless */}
-          <motion.div 
-            style={{ x: imageX, y: imageY }} 
+          <motion.div
+            style={{ x: imageX, y: imageY }}
             animate={{ y: [0, -10, 0] }}
             transition={{ y: { duration: 6, repeat: Infinity, ease: "easeInOut" } }}
             className="relative w-full z-10 cursor-pointer"
@@ -192,15 +192,15 @@ const HeroSection = () => {
               alt={name}
               className="w-full h-auto relative z-10 transition-transform duration-700 group-hover:scale-105 drop-shadow-[0_10px_20px_rgba(0,0,0,0.5)]"
             />
-            
+
             {/* Signature at bottom right */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 1, duration: 1 }}
               className="absolute -bottom-4 right-4 z-20"
             >
-              <span 
+              <span
                 className="text-4xl md:text-6xl text-orange-400 opacity-90 rotate-[-5deg] inline-block font-medium drop-shadow-md"
                 style={{ fontFamily: "'Brush Script MT', 'Dancing Script', cursive" }}
               >
@@ -209,21 +209,21 @@ const HeroSection = () => {
             </motion.div>
           </motion.div>
         </div>
-        
+
         {/* Continuous Floating Badge */}
         <motion.div
-            style={{ x: badgeX, y: badgeY }}
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ y: [0, -12, 0], opacity: 1 }}
-            transition={{ y: { duration: 4, repeat: Infinity, ease: "easeInOut" }, opacity: { delay: 0.6, duration: 1 } }}
-            className="absolute -bottom-6 md:-bottom-10 -left-4 md:-left-12 bg-white dark:bg-[#1a1a1a] rounded-2xl p-5 shadow-[0_15px_40px_rgba(249,115,22,0.12)] border border-orange-50 dark:border-white/10 z-20 transition-colors"
-          >
-            <div className="text-[10px] text-gray-400 dark:text-gray-500 mb-1 font-bold uppercase tracking-widest transition-colors">Open to</div>
-            <div className="text-base font-extrabold text-[#C2410C] dark:text-orange-400 mb-2 transition-colors">Internship Opportunities</div>
-            <div className="flex items-center text-[10px] font-bold text-gray-500">
-              <motion.span animate={{ opacity: [1, 0.5, 1] }} transition={{ duration: 1.5, repeat: Infinity }} className="w-2 h-2 rounded-full bg-emerald-500 mr-2 shadow-[0_0_8px_rgba(16,185,129,0.4)]"></motion.span>
-              Available for Opportunities
-            </div>
+          style={{ x: badgeX, y: badgeY }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ y: [0, -12, 0], opacity: 1 }}
+          transition={{ y: { duration: 4, repeat: Infinity, ease: "easeInOut" }, opacity: { delay: 0.6, duration: 1 } }}
+          className="absolute -bottom-6 md:-bottom-10 -left-4 md:-left-12 bg-white dark:bg-[#1a1a1a] rounded-2xl p-5 shadow-[0_15px_40px_rgba(249,115,22,0.12)] border border-orange-50 dark:border-white/10 z-20 transition-colors"
+        >
+          <div className="text-[10px] text-gray-400 dark:text-gray-500 mb-1 font-bold uppercase tracking-widest transition-colors">Open to</div>
+          <div className="text-base font-extrabold text-[#C2410C] dark:text-orange-400 mb-2 transition-colors">Internship Opportunities</div>
+          <div className="flex items-center text-[10px] font-bold text-gray-500">
+            <motion.span animate={{ opacity: [1, 0.5, 1] }} transition={{ duration: 1.5, repeat: Infinity }} className="w-2 h-2 rounded-full bg-emerald-500 mr-2 shadow-[0_0_8px_rgba(16,185,129,0.4)]"></motion.span>
+            Available for Opportunities
+          </div>
         </motion.div>
       </motion.div>
     </div>
