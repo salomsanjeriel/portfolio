@@ -82,20 +82,20 @@ const HeroSection = () => {
       ref={containerRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center pt-20 lg:pt-32 min-h-[85vh] bg-white relative overflow-hidden"
+      className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center pt-20 lg:pt-32 min-h-[85vh] relative overflow-hidden transition-colors duration-700"
     >
       {/* Left side: Intro text */}
       <ScrollReveal className="lg:col-span-6 flex flex-col justify-center order-2 lg:order-1 z-10 px-4 md:px-8">
         
         <ScrollRevealItem className="mb-6">
-          <span className="inline-flex items-center px-4 py-1.5 bg-orange-50 border border-orange-200 text-[11px] font-extrabold text-primary-500 uppercase tracking-[0.2em] rounded-full">
-            <span className="w-2 h-2 rounded-full bg-primary-500 mr-2 animate-pulse"></span>
+          <span className="inline-flex items-center px-4 py-1.5 bg-orange-50 dark:bg-orange-500/10 border border-orange-200 dark:border-orange-500/30 text-[11px] font-extrabold text-primary-500 dark:text-orange-400 uppercase tracking-[0.2em] rounded-full transition-colors">
+            <span className="w-2 h-2 rounded-full bg-primary-500 dark:bg-orange-400 mr-2 animate-pulse"></span>
             IT UNDERGRADUATE
           </span>
         </ScrollRevealItem>
 
         <ScrollRevealItem>
-          <h1 className="text-5xl md:text-6xl lg:text-[5rem] font-extrabold text-textMain mb-2 leading-[1.1] tracking-tight">
+          <h1 className="text-5xl md:text-6xl lg:text-[5rem] font-extrabold text-textMain dark:text-white mb-2 leading-[1.1] tracking-tight transition-colors">
             Hello, I'm
           </h1>
           <h1 className="text-5xl md:text-6xl lg:text-[5rem] font-extrabold text-primary-500 mb-2 leading-[1.1] tracking-tight flex flex-wrap">
@@ -107,7 +107,7 @@ const HeroSection = () => {
         </ScrollRevealItem>
 
         <ScrollRevealItem>
-          <p className="text-gray-500 text-lg md:text-xl mb-10 max-w-xl leading-relaxed font-medium">
+          <p className="text-gray-500 dark:text-gray-300 text-lg md:text-xl mb-10 max-w-xl leading-relaxed font-medium transition-colors">
             {summary.split('.')[0]}. {summary.split('.')[1]}.
           </p>
         </ScrollRevealItem>
@@ -116,20 +116,20 @@ const HeroSection = () => {
           <a href="/projects" className="flex items-center justify-center px-8 py-4 bg-primary-500 hover:bg-primary-600 text-white rounded-full text-sm font-bold transition-all duration-300 shadow-[0_4px_14px_rgba(249,115,22,0.39)] hover:shadow-[0_6px_20px_rgba(249,115,22,0.4)]">
             Explore My Work <ArrowRight className="ml-2 w-4 h-4" />
           </a>
-          <a href="/#contact" className="flex items-center justify-center px-8 py-4 bg-white hover:bg-gray-50 text-textMain border-2 border-gray-200 rounded-full text-sm font-bold transition-all duration-300 shadow-sm">
-            Contact Me <Mail className="ml-2 w-4 h-4 text-gray-400" />
+          <a href="/#contact" className="flex items-center justify-center px-8 py-4 bg-white dark:bg-white/5 hover:bg-gray-50 dark:hover:bg-white/10 text-textMain dark:text-white border-2 border-gray-200 dark:border-white/10 rounded-full text-sm font-bold transition-all duration-300 shadow-sm">
+            Contact Me <Mail className="ml-2 w-4 h-4 text-gray-400 dark:text-gray-300" />
           </a>
         </ScrollRevealItem>
 
         <ScrollRevealItem className="flex items-center space-x-4">
-          <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mr-2">Find me on</span>
-          <a href={portfolioData.contact.github} target="_blank" rel="noreferrer" className="w-12 h-12 rounded-full border-2 border-orange-100 flex items-center justify-center text-orange-400 hover:text-primary-600 hover:border-primary-300 hover:bg-orange-50 transition-all shadow-sm hover:shadow-md">
+          <span className="text-[10px] font-bold text-gray-400 dark:text-gray-500 uppercase tracking-widest mr-2 transition-colors">Find me on</span>
+          <a href={portfolioData.contact.github} target="_blank" rel="noreferrer" className="w-12 h-12 rounded-full border-2 border-orange-100 dark:border-white/10 flex items-center justify-center text-orange-400 hover:text-primary-600 dark:hover:text-white hover:border-primary-300 hover:bg-orange-50 dark:hover:bg-white/10 transition-all shadow-sm hover:shadow-md">
             <FaGithub className="w-5 h-5" />
           </a>
-          <a href={portfolioData.contact.linkedin} target="_blank" rel="noreferrer" className="w-12 h-12 rounded-full border-2 border-orange-100 flex items-center justify-center text-orange-400 hover:text-primary-600 hover:border-primary-300 hover:bg-orange-50 transition-all shadow-sm hover:shadow-md">
+          <a href={portfolioData.contact.linkedin} target="_blank" rel="noreferrer" className="w-12 h-12 rounded-full border-2 border-orange-100 dark:border-white/10 flex items-center justify-center text-orange-400 hover:text-primary-600 dark:hover:text-white hover:border-primary-300 hover:bg-orange-50 dark:hover:bg-white/10 transition-all shadow-sm hover:shadow-md">
             <FaLinkedin className="w-5 h-5" />
           </a>
-          <a href={`mailto:${portfolioData.contact.email}`} className="w-12 h-12 rounded-full border-2 border-orange-100 flex items-center justify-center text-orange-400 hover:text-primary-600 hover:border-primary-300 hover:bg-orange-50 transition-all shadow-sm hover:shadow-md">
+          <a href={`mailto:${portfolioData.contact.email}`} className="w-12 h-12 rounded-full border-2 border-orange-100 dark:border-white/10 flex items-center justify-center text-orange-400 hover:text-primary-600 dark:hover:text-white hover:border-primary-300 hover:bg-orange-50 dark:hover:bg-white/10 transition-all shadow-sm hover:shadow-md">
             <Mail className="w-5 h-5" />
           </a>
         </ScrollRevealItem>
@@ -188,10 +188,10 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ y: [0, -12, 0], opacity: 1 }}
             transition={{ y: { duration: 4, repeat: Infinity, ease: "easeInOut" }, opacity: { delay: 0.6, duration: 1 } }}
-            className="absolute -bottom-6 md:-bottom-10 -left-4 md:-left-12 bg-white rounded-2xl p-5 shadow-[0_15px_40px_rgba(249,115,22,0.12)] border border-orange-50 z-20"
+            className="absolute -bottom-6 md:-bottom-10 -left-4 md:-left-12 bg-white dark:bg-[#1a1a1a] rounded-2xl p-5 shadow-[0_15px_40px_rgba(249,115,22,0.12)] border border-orange-50 dark:border-white/10 z-20 transition-colors"
           >
-            <div className="text-[10px] text-gray-400 mb-1 font-bold uppercase tracking-widest">Open to</div>
-            <div className="text-base font-extrabold text-[#C2410C] mb-2">Internship Opportunities</div>
+            <div className="text-[10px] text-gray-400 dark:text-gray-500 mb-1 font-bold uppercase tracking-widest transition-colors">Open to</div>
+            <div className="text-base font-extrabold text-[#C2410C] dark:text-orange-400 mb-2 transition-colors">Internship Opportunities</div>
             <div className="flex items-center text-[10px] font-bold text-gray-500">
               <motion.span animate={{ opacity: [1, 0.5, 1] }} transition={{ duration: 1.5, repeat: Infinity }} className="w-2 h-2 rounded-full bg-emerald-500 mr-2 shadow-[0_0_8px_rgba(16,185,129,0.4)]"></motion.span>
               Available for Opportunities

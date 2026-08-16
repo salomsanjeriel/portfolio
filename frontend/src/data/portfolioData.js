@@ -48,7 +48,15 @@ export const portfolioData = {
       description: "Developed a customer booking workflow with validation and exception handling, applied OOP and basic MVC architecture, implemented backend error handling using Spring Boot, and ensured reliable API integration.",
       technologies: ["Java", "MySQL", "Spring Boot"],
       imageUrl: "https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=600&auto=format&fit=crop", // Gray placeholder representation
-      githubUrl: "[YOUR_GITHUB_LINK]",
+      githubUrl: "https://github.com/salomsanjeriel/Beauty-salon-management-app.git",
+      demoUrl: "",
+    },
+    {
+      title: "AI Study Chatbot",
+      description: "Developed an AI-powered study chatbot to assist students with learning materials, answering questions, and providing educational support.",
+      technologies: ["Python", "AI", "Machine Learning"],
+      imageUrl: "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=600&auto=format&fit=crop", // AI Chatbot placeholder
+      githubUrl: "https://github.com/salomsanjeriel/Study-chatbot.git",
       demoUrl: "",
     }
   ],
@@ -58,12 +66,18 @@ export const portfolioData = {
       issuer: "University of Moratuwa",
       date: "2025",
       description: "",
+      image: "/src/assets/certificates/webdevelopment.jpeg"
     },
     {
       title: "AI Chatbot & Machine Learning",
       issuer: "DevTown",
       date: "2026",
       description: "",
+      images: [
+        "/src/assets/certificates/devtown-1.jpeg",
+        "/src/assets/certificates/devtown-2.jpeg",
+        "/src/assets/certificates/devtown-3.jpeg"
+      ]
     },
     {
       title: "AI Foundation Certificate Course",
