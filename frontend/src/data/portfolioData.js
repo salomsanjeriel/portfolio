@@ -11,6 +11,7 @@ export const portfolioData = {
       institution: "University of Kelaniya",
       degree: "BSc (Hons) in Information Technology",
       dates: "2025–2029",
+      url: "https://im.kln.ac.lk/",
       achievements: [
         "Organizing Committee (OC) Member for Leo Club 'Avurudu' Event"
       ],
