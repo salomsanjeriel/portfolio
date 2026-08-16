@@ -16,6 +16,16 @@ export const portfolioData = {
       ],
     },
     {
+      institution: "St. Michael's College, Batticaloa",
+      degree: "G.C.E. Advanced Level",
+      dates: "2021–2023",
+      logo: "/src/assets/education/stmichaels.png",
+      url: "https://smc.edu.lk/",
+      achievements: [
+        "Completed Advanced Level Studies"
+      ],
+    },
+    {
       institution: "Informatics Institute of Technology",
       degree: "AI Foundation Certificate Course",
       dates: "2025–2026 (Currently reading)",
