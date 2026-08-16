@@ -11,7 +11,9 @@ export const portfolioData = {
       institution: "University of Kelaniya",
       degree: "BSc (Hons) in Information Technology",
       dates: "2025–2029",
-      achievements: [],
+      achievements: [
+        "Organizing Committee (OC) Member for Leo Club 'Avurudu' Event"
+      ],
     },
     {
       institution: "Informatics Institute of Technology",
@@ -80,10 +82,22 @@ export const portfolioData = {
       ]
     },
     {
-      title: "AI Foundation Certificate Course",
-      issuer: "Informatics Institute of Technology",
-      date: "2025–2026 (Currently reading)",
-      description: "",
+      title: "ARTEMIA IDEATHON",
+      issuer: "IEEE WIE Student Branch, University of Sri Jayewardenepura",
+      date: "October 2025",
+      description: "Participated in the Phase 1: Ideathon of Artemia 1.0 as part of team CraftX.",
+      image: "/src/assets/certificates/artemia.jpeg",
+    },
+    {
+      title: "Machine Learning Mastery",
+      issuer: "DevTown & Partners (MSME, Google Developer Groups, Microsoft Student Chapter)",
+      date: "June 2026",
+      description: "Successfully completed 5-days Free Bootcamp on Machine Learning Mastery.",
+      images: [
+        "/src/assets/certificates/ml-mastery-1.jpg",
+        "/src/assets/certificates/ml-mastery-2.jpg",
+        "/src/assets/certificates/ml-mastery-3.jpg"
+      ]
     }
   ],
   contact: {
